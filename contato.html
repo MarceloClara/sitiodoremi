@@ -1,0 +1,79 @@
+<!-- Contato start -->
+<section id="contact" class="container wow bounceInUp" data-wow-offset="50">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Entre em contato<a href="https://api.whatsapp.com/send?phone=5511996567816"><img src="imagens/botao-whatsapp.png" alt="contact-img" width="64" height="64"></a></h2>
+      </div>
+      <div class="col-md-4 col-xs-12 pull-right">
+        <h4 class="contact-box-title">Fale conosco</h4>
+        <div class="contact-box">
+          <img src="imagens/avatar01.png" alt="contact-img">
+                  <div class="contact-box-name">Sítio Do-Re-Mi</div>
+          <div class="contact-box-phon"><span class="highlight">Telefone:</span> +55 (11) 99656-7816</div>
+          <div class="contact-box-email"><span class="highlight">Email:</span> adm.sitio.doremi@gmail.com</div>
+          <div class="clearfix"></div>
+        </div>
+        <div class="contact-box-border">&nbsp;</div>
+
+        <div class="contact-box-divider">&nbsp;</div>
+
+        <!-- inicio dos outros contatos
+        <h4 class="contact-box-title">Change or Cancel Reservation</h4>
+        <div class="contact-box">
+        <img src="imagens/contact-box-img2.jpg" alt="contact-img">
+        <div class="contact-box-name">Mike Smith</div>
+        <div class="contact-box-phon"><span class="highlight">Phone:</span> 666-999-888</div>
+        <div class="contact-box-email"><span class="highlight">Email:</span> connor@example.com</div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="contact-box-border">&nbsp;</div>
+
+      <div class="contact-box">
+      <img src="imagens/contact-box-img3.jpg" alt="contact-img">
+      <div class="contact-box-name">Jane Doe</div>
+      <div class="contact-box-phon"><span class="highlight">Phone:</span> 666-999-888</div>
+      <div class="contact-box-email"><span class="highlight">Email:</span> connor@example.com</div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="contact-box-border">&nbsp;</div>
+
+    fim dos outros contatos  -->
+  </div>
+  <div class="col-md-8 col-xs-12 pull-left">
+    <p class="contact-info"><span class="highlight">Endereço:</span><br>
+      <span class="address"> Rodovia Prof. Francisco Ribeiro Nogueira, km 75 - Taiaçupeba, Mogi das Cruzes - SP</span></p>
+      <form action="enviarEmail.php" method="post" id="contact-form" name="contact-form">
+        <input type="hidden" name="action" value="send_contact_form"/>
+
+        <div class="alert hidden" id="contact-form-msg"></div>
+
+        <div class="form-group">
+          <input type="text" class="form-control first-name text-field" name="first-name" placeholder="Nome:">
+          <input type="text" class="form-control last-name text-field" name="last-name" placeholder="Sobrenome:">
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="form-group">
+          <input type="tel" class="form-control telephone text-field" name="telephone" placeholder="Telefone:">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control email text-field" name="assunto" placeholder="Assunto:">
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control email text-field" name="email" placeholder="Email:">
+        </div>
+
+        <div class="form-group">
+          <textarea class="form-control message" name="message" placeholder="Mensagem:"></textarea>
+        </div>
+
+        <input type="submit" class="btn submit-message" name="submit-message" value="Enviar mensagem">
+
+      </form>
+    </div>
+
+  </div>
+</section>
+<!-- Contato end -->
