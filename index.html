@@ -256,6 +256,7 @@
                 <li><a href="#fotos" class="scroll-to">Fotos</a></li>
                 <li><a href="#faq" class="scroll-to">Dúvidas</a></li>
                 <li><a href="#contact" class="scroll-to">Contato</a></li>
+                <li class="nav-reservar"><a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20reserva%20no%20S%C3%ADtio%20Do-Re-Mi." target="_blank" rel="noopener" data-track="whatsapp" data-source="nav">Reservar</a></li>
               </ul>
               <!-- Nav-Links end -->
             </div>
@@ -1407,7 +1408,7 @@
     <img src="imagens/avatar01.png" alt="Contato Sítio Do-Re-Mi">
             <div class="contact-box-name">Sítio Do-Re-Mi</div>
     <div class="contact-box-phon"><span class="highlight">Telefone ou Whatsapp:</span>
-      <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20consulta%20sobre%20o%20S%C3%ADtio%20Do-Re-Mi.">Proprietários +55 (11) 94779-1202</a>
+      <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20uma%20consulta%20sobre%20o%20S%C3%ADtio%20Do-Re-Mi.">Silvana +55 (11) 94779-1202</a>
     </div>
     <div class="contact-box-email"><span class="highlight">Email:</span>
       <a href="mailto:adm.sitio.doremi@gmail.com?subject=Consulta%20de%20aluguel%20-%20S%C3%ADtio%20Do-Re-Mi&body=Ol%C3%A1%2C%0A%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20aluguel%20do%20S%C3%ADtio%20Do-Re-Mi.%0A%0ANome%3A%0ATelefone%3A%0AData%20pretendida%3A%0AOp%C3%A7%C3%A3o%20de%20aluguel%3A%0AObserva%C3%A7%C3%B5es%3A%0A%0AObrigado%21">adm.sitio.doremi@gmail.com</a>
@@ -1462,6 +1463,134 @@
   </script>
 
   <script src="js/custom.js"></script>
+
+  <!-- LGPD cookie consent banner -->
+  <div id="lgpd-banner" class="lgpd-banner" role="region" aria-label="Aviso de cookies">
+    <div class="lgpd-text">
+      <strong>🍪 Este site usa cookies.</strong>
+      Usamos cookies do Google Analytics para entender como o site é usado e melhorar sua experiência.
+    </div>
+    <div class="lgpd-actions">
+      <button type="button" class="lgpd-more">Saber mais</button>
+      <button type="button" class="lgpd-accept">Aceitar</button>
+    </div>
+  </div>
+
+  <dialog id="privacy-dialog" class="privacy-dialog" aria-labelledby="privacy-title">
+    <h3 id="privacy-title">Política de Privacidade e Cookies</h3>
+    <p>O Sítio Do-Re-Mi respeita sua privacidade e segue a Lei Geral de Proteção de Dados (LGPD - Lei 13.709/2018).</p>
+
+    <h4>Quais cookies usamos</h4>
+    <ul>
+      <li><strong>Google Analytics (GA4):</strong> coleta estatísticas de uso (páginas visitadas, tempo de permanência, origem do tráfego). Os dados são anonimizados e usados apenas para melhorar o site.</li>
+    </ul>
+
+    <h4>Quais dados coletamos pelo formulário/WhatsApp</h4>
+    <ul>
+      <li>Apenas as informações que você nos enviar voluntariamente ao entrar em contato (nome, telefone, e-mail, datas pretendidas).</li>
+      <li>Usamos esses dados apenas para responder sua consulta e processar sua reserva.</li>
+      <li>Não compartilhamos suas informações com terceiros.</li>
+    </ul>
+
+    <h4>Como desabilitar cookies</h4>
+    <p>Você pode desabilitar cookies nas configurações do seu navegador. Isso não impede o uso do site, mas pode afetar nossa análise de tráfego.</p>
+
+    <h4>Contato</h4>
+    <p>Dúvidas sobre privacidade? Fale conosco: <a href="mailto:adm.sitio.doremi@gmail.com">adm.sitio.doremi@gmail.com</a></p>
+
+    <button type="button" class="privacy-close">Fechar</button>
+  </dialog>
+
+  <script>
+  (function() {
+    var banner = document.getElementById('lgpd-banner');
+    var dialog = document.getElementById('privacy-dialog');
+    if (!banner) return;
+    var KEY = 'sd_lgpd_consent_v1';
+
+    // Show banner if user hasn't decided yet
+    try {
+      if (!localStorage.getItem(KEY)) {
+        banner.classList.add('show');
+      }
+    } catch (e) {
+      // localStorage blocked - show anyway, will not persist
+      banner.classList.add('show');
+    }
+
+    banner.querySelector('.lgpd-accept').addEventListener('click', function() {
+      try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
+      banner.classList.remove('show');
+    });
+
+    banner.querySelector('.lgpd-more').addEventListener('click', function() {
+      if (dialog && typeof dialog.showModal === 'function') {
+        dialog.showModal();
+      }
+    });
+
+    if (dialog) {
+      var closeBtn = dialog.querySelector('.privacy-close');
+      if (closeBtn) closeBtn.addEventListener('click', function() { dialog.close(); });
+      // Click on backdrop closes
+      dialog.addEventListener('click', function(e) {
+        if (e.target === dialog) dialog.close();
+      });
+    }
+  })();
+  </script>
+
+  <!-- GA4 event tracking for contact CTAs -->
+  <script>
+  (function() {
+    if (typeof gtag !== 'function') return;
+
+    function inferSource(el) {
+      // explicit override wins
+      var explicit = el.getAttribute('data-source');
+      if (explicit) return explicit;
+      if (el.classList.contains('whatsapp-float')) return 'floating';
+      if (el.classList.contains('hero-cta'))       return 'hero';
+      if (el.classList.contains('reserve-button')) return 'rental_card';
+      if (el.classList.contains('ig-follow'))      return 'instagram_section';
+      if (el.classList.contains('ig-card'))        return 'instagram_card';
+      if (el.classList.contains('ig-link'))        return 'header_or_footer_ig';
+      if (el.classList.contains('maps-button'))    return 'directions_card';
+      if (el.closest('#contact'))                  return 'contact_section';
+      if (el.closest('#faq'))                      return 'faq';
+      if (el.closest('footer'))                    return 'footer';
+      if (el.closest('header'))                    return 'header';
+      return 'unknown';
+    }
+
+    function trackClick(event, type) {
+      var el = event.currentTarget;
+      var source = inferSource(el);
+      var href = el.getAttribute('href') || '';
+      gtag('event', type, {
+        source: source,
+        link_url: href
+      });
+    }
+
+    // WhatsApp links
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(function(a) {
+      a.addEventListener('click', function(e) { trackClick(e, 'click_whatsapp'); });
+    });
+    // Email links
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(a) {
+      a.addEventListener('click', function(e) { trackClick(e, 'click_email'); });
+    });
+    // Phone links
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(a) {
+      a.addEventListener('click', function(e) { trackClick(e, 'click_phone'); });
+    });
+    // Instagram links
+    document.querySelectorAll('a[href*="instagram.com"]').forEach(function(a) {
+      a.addEventListener('click', function(e) { trackClick(e, 'click_instagram'); });
+    });
+  })();
+  </script>
 
   <!-- Gallery lightbox (Wave 2.5) -->
   <dialog id="lightbox" class="lightbox" aria-label="Galeria de fotos ampliada">

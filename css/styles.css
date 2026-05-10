@@ -2472,4 +2472,151 @@ summary:focus-visible {
   }
 }
 
+/* "Reservar" nav button (always-visible CTA)
+--------------------------------------------*/
+header .navbar-default .navbar-nav > li.nav-reservar > a {
+  background-color: #25D366;
+  color: #fff;
+  border: 2px solid #25D366;
+  border-radius: 50px;
+  padding: 8px 18px 7px;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+header .navbar-default .navbar-nav > li.nav-reservar > a:hover,
+header .navbar-default .navbar-nav > li.nav-reservar > a:focus {
+  background-color: #1ebe5d;
+  border-color: #1ebe5d;
+  color: #fff;
+}
+header .navbar-default .navbar-nav > li.nav-reservar > a:active {
+  transform: scale(0.97);
+}
+header .navbar-default .navbar-nav > li.nav-reservar > a::before {
+  content: "\f232"; /* fa-whatsapp */
+  font-family: FontAwesome;
+  font-size: 16px;
+}
+@media (max-width: 992px) {
+  header .navbar-default .navbar-nav > li.nav-reservar > a {
+    margin: 6px 14px;
+    display: inline-flex;
+    width: auto;
+  }
+}
+
+/* LGPD cookie banner + privacy dialog
+--------------------------------------------*/
+.lgpd-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  background: #2f5d30;
+  color: #fff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.45;
+  animation: lgpd-slide-up 0.3s ease-out;
+}
+.lgpd-banner.show { display: flex; }
+.lgpd-banner .lgpd-text {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+.lgpd-banner .lgpd-text strong { font-size: 15px; }
+.lgpd-banner .lgpd-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.lgpd-banner button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+.lgpd-banner .lgpd-accept {
+  background-color: #23c741;
+  color: #fff;
+}
+.lgpd-banner .lgpd-accept:hover { background-color: #1eb238; }
+.lgpd-banner .lgpd-accept:active { transform: scale(0.97); }
+.lgpd-banner .lgpd-more {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: underline;
+  padding: 10px 12px;
+}
+.lgpd-banner .lgpd-more:hover { color: #cfe9d0; }
+@keyframes lgpd-slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+@media (max-width: 660px) {
+  .lgpd-banner {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    padding: 14px;
+    font-size: 13px;
+  }
+  .lgpd-banner .lgpd-actions { width: 100%; }
+  .lgpd-banner .lgpd-actions button { flex: 1; }
+}
+
+.privacy-dialog[open] {
+  border: none;
+  border-radius: 8px;
+  padding: 28px 30px;
+  max-width: 600px;
+  width: 92vw;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  color: #2f3a30;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.privacy-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+.privacy-dialog h3 {
+  margin: 0 0 14px;
+  color: #2f5d30;
+  font-size: 22px;
+}
+.privacy-dialog h4 {
+  margin: 16px 0 6px;
+  font-size: 16px;
+  color: #2f5d30;
+}
+.privacy-dialog p { margin: 0 0 10px; }
+.privacy-dialog ul { margin: 6px 0 12px 20px; }
+.privacy-dialog .privacy-close {
+  display: block;
+  margin: 18px 0 0 auto;
+  background-color: #2f5d30;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.privacy-dialog .privacy-close:hover { background-color: #23c741; }
+
+
 
