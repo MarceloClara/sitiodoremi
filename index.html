@@ -58,17 +58,6 @@
   <link rel="apple-touch-icon-precomposed" href="imagens/ico/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="imagens/ico/favicon.png">
 
-  <meta name="viewport" content="initial-scale=1.0">
-  <meta charset="utf-8">
-  <style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-      height: 50%;
-    }
-    
-  </style>
-
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNG4TQLSGS"></script>
   <script>
@@ -1221,47 +1210,13 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
 
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.autocomplete.min.js"></script>
   <script src="js/jquery.placeholder.js"></script>
-  <script src="js/locations-autocomplete.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRajF6anNNHNu20SOX5FvxLMWu0oM6-E4&callback=initMap&v=weekly" async defer></script>
-  <script src="js/gmap3.min.js"></script>
 
-  <!--[if !(gte IE 8)]><!-->
   <script src="js/wow.min.js"></script>
   <script>
-  // Initialize WOW
-  //-------------------------------------------------------------
-  new WOW({mobile: false}).init();
+    new WOW({mobile: false}).init();
   </script>
-  <!--<![endif]-->
 
   <script src="js/custom.js"></script>
-
-  <script>
-    var map;
-    function initMap() {
-        // The location of Uluru
-        const coordinates = {lat: -23.679509816445762, lng: -46.20851536358158};
-        
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 15,
-          center: coordinates,
-          
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: coordinates,
-          map: map,
-          label: {
-            text: "Sítio Do-Re-Mi",
-            color: "#2f5d30",
-            fontWeight: "bold"
-          }
-        });
-      }
-  </script>
 </body>
 </html>
