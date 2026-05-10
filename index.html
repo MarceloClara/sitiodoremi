@@ -14,16 +14,22 @@
   <meta property="og:url" content="https://www.sitiodoremi.com.br/">
   <meta property="og:title" content="Sito Do-Re-Mi - Mogi das Cruzes - SP">
   <meta property="og:description" content="Sitio para locação em Mogi das Cruzes. Muita natureza e ar puro a 60 km de São Paulo.">
-  <meta property="og:image" content="http://sitiodoremi.com.br/img/panoramica-2.png">
+  <meta property="og:image" content="https://sitiodoremi.com.br/imagens/panoramica-2.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:site" content="@sitio_doremi">
-  <meta property="twitter:url" content="http://www.sitiodoremi.com.br/">
+  <meta property="twitter:url" content="https://www.sitiodoremi.com.br/">
   <meta property="twitter:title" content="Sito Do-Re-Mi - Mogi das Cruzes - SP">
   <meta property="twitter:description" content="Sitio para locação em Mogi das Cruzes. Muita natureza e ar puro a 60 km de São Paulo.">
-  <meta property="twitter:image" content="http://sitiodoremi.com.br/img/panoramica-2.png">
+  <meta property="twitter:image" content="https://sitiodoremi.com.br/imagens/panoramica-2.png">
 
+  <!-- Resource hints for third-party origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.gstatic.com">
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +39,7 @@
   <link href="css/mapa.css" rel="stylesheet">
 
   <!-- Google Font Lato -->
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic&display=swap' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <!-- Plugin Styles -->
@@ -71,6 +77,45 @@
     gtag('js', new Date());
 
     gtag('config', 'G-BNG4TQLSGS');
+  </script>
+
+  <!-- Structured data: LodgingBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Sítio Do-Re-Mi",
+    "description": "Sítio para locação em Mogi das Cruzes. Muita natureza e ar puro a 60 km de São Paulo. Ideal para finais de semana, festas, eventos de empresa e encontros de amigos.",
+    "url": "https://www.sitiodoremi.com.br/",
+    "image": "https://sitiodoremi.com.br/imagens/panoramica-2.png",
+    "telephone": "+55-11-94779-1202",
+    "email": "adm.sitio.doremi@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rodovia Professor Francisco Ribeiro Nogueira, km 75",
+      "addressLocality": "Taiaçupeba",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -23.679509816445762,
+      "longitude": -46.20851536358158
+    },
+    "sameAs": [
+      "https://www.instagram.com/doremi.sitio/"
+    ],
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Piscina", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Lago", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Churrasqueira", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Cozinha", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Casa Sede e Casa Auxiliar", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Mata nativa e trilhas", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Estacionamento", "value": true }
+    ]
+  }
   </script>
 
 </head>
@@ -361,7 +406,7 @@
             <div class="vehicle-data" id="vehicle-1">
               <div class="col-md-6 wow fadeIn" data-wow-offset="100">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/DJI_0377.jpg" alt="imagem">
+                  <img class="img-responsive" src="imagens/DJI_0377.jpg" alt="Vista aérea do sítio - opção um dia de churrasco" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3 wow fadeInUp" data-wow-offset="200">
@@ -409,7 +454,7 @@
             <div class="vehicle-data" id="vehicle-2">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6311.jpg" alt="imagem">
+                  <img class="img-responsive" src="imagens/IMG_6311.jpg" alt="Casa sede - opção diária" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -457,7 +502,7 @@
             <div class="vehicle-data" id="vehicle-3">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6311.jpg" alt="Vehicle">
+                  <img class="img-responsive" src="imagens/IMG_6311.jpg" alt="Casa sede - opção fim de semana" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -505,7 +550,7 @@
             <div class="vehicle-data" id="vehicle-4">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6234.jpg" alt="Imagem">
+                  <img class="img-responsive" src="imagens/IMG_6234.jpg" alt="Casa auxiliar - opção diária" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -553,7 +598,7 @@
             <div class="vehicle-data" id="vehicle-5">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6278.jpg" alt="Imagem">
+                  <img class="img-responsive" src="imagens/IMG_6278.jpg" alt="Casa auxiliar - opção fim de semana" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -601,7 +646,7 @@
             <div class="vehicle-data" id="vehicle-6">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/pomar.jpg" alt="Vehicle">
+                  <img class="img-responsive" src="imagens/pomar.jpg" alt="Pomar do sítio - opção diária as duas casas" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -649,7 +694,7 @@
             <div class="vehicle-data" id="vehicle-7">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/pomar.jpg" alt="Vehicle">
+                  <img class="img-responsive" src="imagens/pomar.jpg" alt="Pomar do sítio - opção eventos para empresas" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -697,7 +742,7 @@
             <div class="vehicle-data" id="vehicle-8">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/visaopanoramicacasa.jpg" alt="Vehicle">
+                  <img class="img-responsive" src="imagens/visaopanoramicacasa.jpg" alt="Vista panorâmica das casas - opção aluguel semanal" loading="lazy" decoding="async">
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -815,7 +860,7 @@
           <!-- Single photo start -->
           <div class="row wow fadeInLeft" data-wow-offset="100">
             <div class="col-md-6 col-xs-12 pull-right">
-              <img src="imagens/IMG_6199.jpg" alt="Info Img" class="img-responsive">
+              <img src="imagens/IMG_6199.jpg" alt="Vista de uma das áreas do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async">
             </div>
             <div class="col-md-6 pull-left">
               <h2 class="title">Lazer para todos</h2>
@@ -889,7 +934,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Portão de entrada do sítio</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6198.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6198.jpg" alt="Portão de entrada do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Portão end -->
@@ -899,7 +944,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Vista da quadra de areia</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6199.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6199.jpg" alt="Vista da quadra de areia para vôlei e beach tennis" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Entrada end -->
@@ -909,7 +954,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Casa sede</h5>
             <div class="clearfix"></div>
-            <img src="imagens/DJI_0397.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/DJI_0397.jpg" alt="Vista aérea da casa sede do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Varanda sede end -->
@@ -919,7 +964,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Vista geral casa sede e anexos</h5>
             <div class="clearfix"></div>
-            <img src="imagens/DJI_0395.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/DJI_0395.jpg" alt="Vista geral aérea da casa sede e anexos" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Geral sede e anexos end -->
@@ -929,7 +974,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Ampla varanda</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6317.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6317.jpg" alt="Ampla varanda da casa sede" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Varanda sede end -->
@@ -940,7 +985,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Garagem coberta, serve de espaço para festas</h5>
             <div class="clearfix"></div>
-            <img src="imagens/festa02.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/festa02.jpg" alt="Garagem coberta usada como espaço para festas" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Festa end -->
@@ -950,7 +995,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Sala ampla se integra aos demais cômodos e ambientes</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6283.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6283.jpg" alt="Sala ampla integrada aos demais ambientes da casa sede" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Sala sede end -->
@@ -960,7 +1005,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Sala integrada com a cozinha</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6285.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6285.jpg" alt="Sala integrada com a cozinha da casa sede" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Cozinha visao sede end -->
@@ -970,7 +1015,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha da casa sede </h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6284.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6284.jpg" alt="Cozinha da casa sede" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Cozinha  sede end -->
@@ -980,7 +1025,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Suite principal da casa sede</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6255.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6255.jpg" alt="Suíte principal da casa sede" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Suite sede end -->
@@ -990,7 +1035,7 @@
         <div class="service-box wow fadeInLeft" data-wow-offset="100">
           <h5>Suite 2 da casa sede</h5>
           <div class="clearfix"></div>
-          <img src="imagens/IMG_6267.jpg" alt="Info Img" class="img-responsive">
+          <img src="imagens/IMG_6267.jpg" alt="Suíte 2 da casa sede" class="img-responsive" loading="lazy" decoding="async">
         </div>
       </div>
       <!-- Suite 2 sede end -->
@@ -1000,7 +1045,7 @@
         <div class="service-box wow fadeInLeft" data-wow-offset="100">
           <h5>Quarto do meio da casa sede</h5>
           <div class="clearfix"></div>
-          <img src="imagens/IMG_6263.jpg" alt="Info Img" class="img-responsive">
+          <img src="imagens/IMG_6263.jpg" alt="Quarto do meio da casa sede" class="img-responsive" loading="lazy" decoding="async">
         </div>
       </div>
       <!-- Quarto casa sede end -->
@@ -1010,7 +1055,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha  caipira anexa a casa sede</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6312.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6312.jpg" alt="Cozinha caipira anexa à casa sede" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Festa end -->
@@ -1020,7 +1065,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha caipira e banheiros externos</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6237.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6237.jpg" alt="Cozinha caipira e banheiros externos" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Cozinha caipira end -->
@@ -1030,7 +1075,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Churrasqueira externa e acesso ao vestiário</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6243.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6243.jpg" alt="Churrasqueira externa com acesso ao vestiário" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Currasqueira end -->
@@ -1040,7 +1085,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Piscina com prainha</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6246.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6246.jpg" alt="Piscina aquecida com prainha" class="img-responsive" loading="lazy" decoding="async">
           </div>
           </div>
           <!-- Piscina end -->
@@ -1050,7 +1095,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Vista da piscina</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6240.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6240.jpg" alt="Vista lateral da piscina aquecida" class="img-responsive" loading="lazy" decoding="async">
           </div>
           </div>
           <!-- Piscina vista end -->
@@ -1060,7 +1105,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6203.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6203.jpg" alt="Fachada da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Casa auxiliar end -->
@@ -1070,7 +1115,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Sala da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6229.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6229.jpg" alt="Sala da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Casa auxiliar sala end -->
@@ -1080,7 +1125,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Quarto 1 da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6215.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6215.jpg" alt="Quarto 1 da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Casa auxiliar quarto 1 end -->
@@ -1090,7 +1135,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Quarto 2 da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6226.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6226.jpg" alt="Quarto 2 da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Casa auxiliar quarto 2 end -->
@@ -1100,7 +1145,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6224.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/IMG_6224.jpg" alt="Cozinha da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Casa auxiliar cozinha end -->
@@ -1110,7 +1155,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Lago em ampla área verde gramada</h5>
             <div class="clearfix"></div>
-            <img src="imagens/DJI_0401.jpg" alt="Info Img" class="img-responsive">
+            <img src="imagens/DJI_0401.jpg" alt="Lago em ampla área verde gramada do sítio" class="img-responsive" loading="lazy" decoding="async">
           </div>
         </div>
         <!-- Lago end -->
@@ -1120,7 +1165,7 @@
         <div class="service-box wow fadeInLeft" data-wow-offset="100">
           <h5>Pomar e horta</h5>
           <div class="clearfix"></div>
-          <img src="imagens/IMG_6244.jpg" alt="Info Img" class="img-responsive">
+          <img src="imagens/IMG_6244.jpg" alt="Pomar e horta do sítio" class="img-responsive" loading="lazy" decoding="async">
         </div>
         </div>
         <!-- Pomar end -->
