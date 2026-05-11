@@ -69,14 +69,31 @@
   <link rel="apple-touch-icon-precomposed" href="imagens/ico/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="imagens/ico/favicon.png">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics with LGPD-compliant consent -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNG4TQLSGS"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-BNG4TQLSGS');
+    // LGPD/GDPR: default to denied until user accepts via banner
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'wait_for_update': 500
+    });
+
+    // Restore prior decision so returning visitors aren't re-prompted
+    try {
+      var sd_lgpd = localStorage.getItem('sd_lgpd_consent_v1');
+      if (sd_lgpd === 'accepted') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    } catch (e) {}
+
+    gtag('js', new Date());
+    gtag('config', 'G-BNG4TQLSGS', { 'anonymize_ip': true });
   </script>
 
   <!-- Structured data: LodgingBusiness -->
@@ -280,14 +297,14 @@
                   <h1 class="title">Muita natureza e ar puro a 60 Km de São Paulo
                     <span class="subtitle">Rod. Professor Francisco Ribeiro Nogueira, km 75 , Taiaçupeba - Mogi das Cruzes</span></h1>
                     <div class="car-img">
-                      <img src="imagens/panoramica-2.jpg" class="img-responsive" alt="Vista panorâmica do Sítio Do-Re-Mi" width="1600" height="708" fetchpriority="high">
+                      <picture><source type="image/webp" srcset="imagens/panoramica-2.webp"><img src="imagens/panoramica-2.jpg" class="img-responsive" alt="Vista panorâmica do Sítio Do-Re-Mi" width="1600" height="708" fetchpriority="high"></picture>
                     </div>
                   </div>
                   <div class="item">
                     <h1 class="title">Venha conhecer o Sítio Do-Re-Mi
                       <span class="subtitle">Faça seu evento, passe um dia ou período temporário com muito verde.</span></h1>
                       <div class="car-img">
-                        <img src="imagens/panoramica-1.jpg" class="img-responsive" alt="Vista panorâmica do Sítio Do-Re-Mi" width="1600" height="708">
+                        <picture><source type="image/webp" srcset="imagens/panoramica-1.webp"><img src="imagens/panoramica-1.jpg" class="img-responsive" alt="Vista panorâmica do Sítio Do-Re-Mi" width="1600" height="708"></picture>
                       </div>
                     </div>
                   </div>
@@ -517,7 +534,7 @@
             <div class="vehicle-data" id="vehicle-1">
               <div class="col-md-6 wow fadeIn" data-wow-offset="100">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/DJI_0377.jpg" alt="Vista aérea do sítio - opção um dia de churrasco" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/DJI_0377.webp"><img class="img-responsive" src="imagens/DJI_0377.jpg" alt="Vista aérea do sítio - opção um dia de churrasco" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3 wow fadeInUp" data-wow-offset="200">
@@ -565,7 +582,7 @@
             <div class="vehicle-data" id="vehicle-2">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6311.jpg" alt="Casa sede - opção diária" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/IMG_6311.webp"><img class="img-responsive" src="imagens/IMG_6311.jpg" alt="Casa sede - opção diária" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -613,7 +630,7 @@
             <div class="vehicle-data" id="vehicle-3">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6311.jpg" alt="Casa sede - opção fim de semana" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/IMG_6311.webp"><img class="img-responsive" src="imagens/IMG_6311.jpg" alt="Casa sede - opção fim de semana" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -661,7 +678,7 @@
             <div class="vehicle-data" id="vehicle-4">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6234.jpg" alt="Casa auxiliar - opção diária" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/IMG_6234.webp"><img class="img-responsive" src="imagens/IMG_6234.jpg" alt="Casa auxiliar - opção diária" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -709,7 +726,7 @@
             <div class="vehicle-data" id="vehicle-5">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/IMG_6278.jpg" alt="Casa auxiliar - opção fim de semana" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/IMG_6278.webp"><img class="img-responsive" src="imagens/IMG_6278.jpg" alt="Casa auxiliar - opção fim de semana" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -757,7 +774,7 @@
             <div class="vehicle-data" id="vehicle-6">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/pomar.jpg" alt="Pomar do sítio - opção diária as duas casas" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/pomar.webp"><img class="img-responsive" src="imagens/pomar.jpg" alt="Pomar do sítio - opção diária as duas casas" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -805,7 +822,7 @@
             <div class="vehicle-data" id="vehicle-7">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/pomar.jpg" alt="Pomar do sítio - opção eventos para empresas" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/pomar.webp"><img class="img-responsive" src="imagens/pomar.jpg" alt="Pomar do sítio - opção eventos para empresas" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -853,7 +870,7 @@
             <div class="vehicle-data" id="vehicle-8">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <img class="img-responsive" src="imagens/DJI_0395.jpg" alt="Vista panorâmica do sítio - opção aluguel semanal" loading="lazy" decoding="async">
+                  <picture><source type="image/webp" srcset="imagens/DJI_0395.webp"><img class="img-responsive" src="imagens/DJI_0395.jpg" alt="Vista panorâmica do sítio - opção aluguel semanal" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -902,76 +919,13 @@
         </section>
   <!-- Aluguel end -->
 
-  <!-- Comentarios start -->
-  <section id="reviews" class="container wow fadeInUp">
-          <div class="row text-center">
-            <div class="col-md-12 stars">
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star big"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-            </div>
-            <div class="col-md-10 col-md-offset-1">
-              <div id="reviews-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-
-                  <!-- Review item 1 start -->
-                  <div class="item active">
-                    <div class="review">
-                      O lugar tem um amplo espaço para a realização de eventos corporativos, conta com uma infraestrutura completa.
-                    </div>
-                    <div class="author">
-                      – Venha conhecer o Sítio Do-Re-Mi -
-                    </div>
-                  </div>
-                  <!-- Review item 1 end -->
-
-                  <!-- Review item 2 start -->
-                  <div class="item">
-                    <div class="review">
-                      Em  Mogi das Cruzes, distrito de Taiaçupeba, Sítio Do-Re-Mi, comemore seu aniversário, festa da empresa, encontro de amigos, etc.
-                    </div>
-                    <div class="author">
-                      – Sítio Do-Re-Mi -
-                    </div>
-                  </div>
-                  <!-- Review item 2 end -->
-
-                  <!-- Review item 3 start -->
-                  <div class="item">
-                    <div class="review">
-                      Passe um dia ou final de semana agradável em Mogi das Cruzes.
-                    </div>
-                    <div class="author">
-                      – Mogi das Cruzes, ditrito de Taiaçupeba -
-                    </div>
-                  </div>
-                  <!-- Review item 3 end -->
-
-                </div>
-
-                <!-- Review Nav start -->
-                <ol class="carousel-indicators">
-                  <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#reviews-carousel" data-slide-to="1"></li>
-                  <li data-target="#reviews-carousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Review Nav end -->
-
-              </div>
-            </div>
-          </div>
-        </section>
-  <!-- Comentarios end -->
-
   <!-- Information start -->
   <section id="information" class="container">
 
           <!-- Single photo start -->
           <div class="row wow fadeInLeft" data-wow-offset="100">
             <div class="col-md-6 col-xs-12 pull-right">
-              <img src="imagens/IMG_6199.jpg" alt="Vista de uma das áreas do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async">
+              <picture><source type="image/webp" srcset="imagens/IMG_6199.webp"><img src="imagens/IMG_6199.jpg" alt="Vista de uma das áreas do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async"></picture>
             </div>
             <div class="col-md-6 pull-left">
               <h2 class="title">Lazer para todos</h2>
@@ -1060,7 +1014,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Portão de entrada do sítio</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6198.jpg" alt="Portão de entrada do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6198.webp"><img src="imagens/IMG_6198.jpg" alt="Portão de entrada do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Portão end -->
@@ -1070,7 +1024,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Vista da quadra de areia</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6199.jpg" alt="Vista da quadra de areia para vôlei e beach tennis" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6199.webp"><img src="imagens/IMG_6199.jpg" alt="Vista da quadra de areia para vôlei e beach tennis" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Entrada end -->
@@ -1080,7 +1034,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Casa sede</h5>
             <div class="clearfix"></div>
-            <img src="imagens/DJI_0397.jpg" alt="Vista aérea da casa sede do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/DJI_0397.webp"><img src="imagens/DJI_0397.jpg" alt="Vista aérea da casa sede do Sítio Do-Re-Mi" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Varanda sede end -->
@@ -1090,7 +1044,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Vista geral casa sede e anexos</h5>
             <div class="clearfix"></div>
-            <img src="imagens/DJI_0395.jpg" alt="Vista geral aérea da casa sede e anexos" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/DJI_0395.webp"><img src="imagens/DJI_0395.jpg" alt="Vista geral aérea da casa sede e anexos" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Geral sede e anexos end -->
@@ -1100,7 +1054,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Ampla varanda</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6317.jpg" alt="Ampla varanda da casa sede" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6317.webp"><img src="imagens/IMG_6317.jpg" alt="Ampla varanda da casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Varanda sede end -->
@@ -1111,7 +1065,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Garagem coberta, serve de espaço para festas</h5>
             <div class="clearfix"></div>
-            <img src="imagens/festa02.jpg" alt="Garagem coberta usada como espaço para festas" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/festa02.webp"><img src="imagens/festa02.jpg" alt="Garagem coberta usada como espaço para festas" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Festa end -->
@@ -1121,7 +1075,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Sala ampla se integra aos demais cômodos e ambientes</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6283.jpg" alt="Sala ampla integrada aos demais ambientes da casa sede" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6283.webp"><img src="imagens/IMG_6283.jpg" alt="Sala ampla integrada aos demais ambientes da casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Sala sede end -->
@@ -1131,7 +1085,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Sala integrada com a cozinha</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6285.jpg" alt="Sala integrada com a cozinha da casa sede" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6285.webp"><img src="imagens/IMG_6285.jpg" alt="Sala integrada com a cozinha da casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Cozinha visao sede end -->
@@ -1141,7 +1095,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha da casa sede </h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6284.jpg" alt="Cozinha da casa sede" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6284.webp"><img src="imagens/IMG_6284.jpg" alt="Cozinha da casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Cozinha  sede end -->
@@ -1151,7 +1105,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Suite principal da casa sede</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6255.jpg" alt="Suíte principal da casa sede" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6255.webp"><img src="imagens/IMG_6255.jpg" alt="Suíte principal da casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Suite sede end -->
@@ -1161,7 +1115,7 @@
         <div class="service-box wow fadeInLeft" data-wow-offset="100">
           <h5>Suite 2 da casa sede</h5>
           <div class="clearfix"></div>
-          <img src="imagens/IMG_6267.jpg" alt="Suíte 2 da casa sede" class="img-responsive" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="imagens/IMG_6267.webp"><img src="imagens/IMG_6267.jpg" alt="Suíte 2 da casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
         </div>
       </div>
       <!-- Suite 2 sede end -->
@@ -1171,7 +1125,7 @@
         <div class="service-box wow fadeInLeft" data-wow-offset="100">
           <h5>Quarto do meio da casa sede</h5>
           <div class="clearfix"></div>
-          <img src="imagens/IMG_6263.jpg" alt="Quarto do meio da casa sede" class="img-responsive" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="imagens/IMG_6263.webp"><img src="imagens/IMG_6263.jpg" alt="Quarto do meio da casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
         </div>
       </div>
       <!-- Quarto casa sede end -->
@@ -1181,7 +1135,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha  caipira anexa a casa sede</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6312.jpg" alt="Cozinha caipira anexa à casa sede" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6312.webp"><img src="imagens/IMG_6312.jpg" alt="Cozinha caipira anexa à casa sede" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Festa end -->
@@ -1191,7 +1145,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha caipira e banheiros externos</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6237.jpg" alt="Cozinha caipira e banheiros externos" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6237.webp"><img src="imagens/IMG_6237.jpg" alt="Cozinha caipira e banheiros externos" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Cozinha caipira end -->
@@ -1201,7 +1155,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Churrasqueira externa e acesso ao vestiário</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6243.jpg" alt="Churrasqueira externa com acesso ao vestiário" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6243.webp"><img src="imagens/IMG_6243.jpg" alt="Churrasqueira externa com acesso ao vestiário" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Currasqueira end -->
@@ -1211,7 +1165,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Piscina com prainha</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6246.jpg" alt="Piscina com prainha" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6246.webp"><img src="imagens/IMG_6246.jpg" alt="Piscina com prainha" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
           </div>
           <!-- Piscina end -->
@@ -1221,7 +1175,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Vista da piscina</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6240.jpg" alt="Vista lateral da piscina" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6240.webp"><img src="imagens/IMG_6240.jpg" alt="Vista lateral da piscina" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
           </div>
           <!-- Piscina vista end -->
@@ -1231,7 +1185,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6203.jpg" alt="Fachada da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6203.webp"><img src="imagens/IMG_6203.jpg" alt="Fachada da casa auxiliar" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Casa auxiliar end -->
@@ -1241,7 +1195,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Sala da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6229.jpg" alt="Sala da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6229.webp"><img src="imagens/IMG_6229.jpg" alt="Sala da casa auxiliar" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Casa auxiliar sala end -->
@@ -1251,7 +1205,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Quarto 1 da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6215.jpg" alt="Quarto 1 da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6215.webp"><img src="imagens/IMG_6215.jpg" alt="Quarto 1 da casa auxiliar" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Casa auxiliar quarto 1 end -->
@@ -1261,7 +1215,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Quarto 2 da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6226.jpg" alt="Quarto 2 da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6226.webp"><img src="imagens/IMG_6226.jpg" alt="Quarto 2 da casa auxiliar" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Casa auxiliar quarto 2 end -->
@@ -1271,7 +1225,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Cozinha da casa auxiliar</h5>
             <div class="clearfix"></div>
-            <img src="imagens/IMG_6224.jpg" alt="Cozinha da casa auxiliar" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/IMG_6224.webp"><img src="imagens/IMG_6224.jpg" alt="Cozinha da casa auxiliar" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Casa auxiliar cozinha end -->
@@ -1281,7 +1235,7 @@
           <div class="service-box wow fadeInLeft" data-wow-offset="100">
             <h5>Lago em ampla área verde gramada</h5>
             <div class="clearfix"></div>
-            <img src="imagens/DJI_0401.jpg" alt="Lago em ampla área verde gramada do sítio" class="img-responsive" loading="lazy" decoding="async">
+            <picture><source type="image/webp" srcset="imagens/DJI_0401.webp"><img src="imagens/DJI_0401.jpg" alt="Lago em ampla área verde gramada do sítio" class="img-responsive" loading="lazy" decoding="async"></picture>
           </div>
         </div>
         <!-- Lago end -->
@@ -1291,7 +1245,7 @@
         <div class="service-box wow fadeInLeft" data-wow-offset="100">
           <h5>Pomar e horta</h5>
           <div class="clearfix"></div>
-          <img src="imagens/IMG_6244.jpg" alt="Pomar e horta do sítio" class="img-responsive" loading="lazy" decoding="async">
+          <picture><source type="image/webp" srcset="imagens/IMG_6244.webp"><img src="imagens/IMG_6244.jpg" alt="Pomar e horta do sítio" class="img-responsive" loading="lazy" decoding="async"></picture>
         </div>
         </div>
         <!-- Pomar end -->
@@ -1364,27 +1318,27 @@
   </div>
   <div class="ig-grid">
     <a class="ig-card" href="https://www.instagram.com/doremi.sitio/" target="_blank" rel="noopener" aria-label="Ver vista aérea no Instagram @doremi.sitio">
-      <img src="imagens/DJI_0395.jpg" alt="Vista aérea do Sítio Do-Re-Mi" loading="lazy" decoding="async">
+      <picture><source type="image/webp" srcset="imagens/DJI_0395.webp"><img src="imagens/DJI_0395.jpg" alt="Vista aérea do Sítio Do-Re-Mi" loading="lazy" decoding="async"></picture>
       <span class="ig-hover" aria-hidden="true"><i class="fa fa-instagram"></i></span>
     </a>
     <a class="ig-card" href="https://www.instagram.com/doremi.sitio/" target="_blank" rel="noopener" aria-label="Ver piscina no Instagram @doremi.sitio">
-      <img src="imagens/IMG_6246.jpg" alt="Piscina do Sítio Do-Re-Mi" loading="lazy" decoding="async">
+      <picture><source type="image/webp" srcset="imagens/IMG_6246.webp"><img src="imagens/IMG_6246.jpg" alt="Piscina do Sítio Do-Re-Mi" loading="lazy" decoding="async"></picture>
       <span class="ig-hover" aria-hidden="true"><i class="fa fa-instagram"></i></span>
     </a>
     <a class="ig-card" href="https://www.instagram.com/doremi.sitio/" target="_blank" rel="noopener" aria-label="Ver área de festas no Instagram @doremi.sitio">
-      <img src="imagens/festa02.jpg" alt="Área de festas do Sítio Do-Re-Mi" loading="lazy" decoding="async">
+      <picture><source type="image/webp" srcset="imagens/festa02.webp"><img src="imagens/festa02.jpg" alt="Área de festas do Sítio Do-Re-Mi" loading="lazy" decoding="async"></picture>
       <span class="ig-hover" aria-hidden="true"><i class="fa fa-instagram"></i></span>
     </a>
     <a class="ig-card" href="https://www.instagram.com/doremi.sitio/" target="_blank" rel="noopener" aria-label="Ver varanda no Instagram @doremi.sitio">
-      <img src="imagens/IMG_6317.jpg" alt="Varanda da casa sede" loading="lazy" decoding="async">
+      <picture><source type="image/webp" srcset="imagens/IMG_6317.webp"><img src="imagens/IMG_6317.jpg" alt="Varanda da casa sede" loading="lazy" decoding="async"></picture>
       <span class="ig-hover" aria-hidden="true"><i class="fa fa-instagram"></i></span>
     </a>
     <a class="ig-card" href="https://www.instagram.com/doremi.sitio/" target="_blank" rel="noopener" aria-label="Ver lago no Instagram @doremi.sitio">
-      <img src="imagens/DJI_0401.jpg" alt="Lago em ampla área verde do sítio" loading="lazy" decoding="async">
+      <picture><source type="image/webp" srcset="imagens/DJI_0401.webp"><img src="imagens/DJI_0401.jpg" alt="Lago em ampla área verde do sítio" loading="lazy" decoding="async"></picture>
       <span class="ig-hover" aria-hidden="true"><i class="fa fa-instagram"></i></span>
     </a>
     <a class="ig-card" href="https://www.instagram.com/doremi.sitio/" target="_blank" rel="noopener" aria-label="Ver pomar no Instagram @doremi.sitio">
-      <img src="imagens/IMG_6244.jpg" alt="Pomar e horta do sítio" loading="lazy" decoding="async">
+      <picture><source type="image/webp" srcset="imagens/IMG_6244.webp"><img src="imagens/IMG_6244.jpg" alt="Pomar e horta do sítio" loading="lazy" decoding="async"></picture>
       <span class="ig-hover" aria-hidden="true"><i class="fa fa-instagram"></i></span>
     </a>
   </div>
@@ -1472,6 +1426,7 @@
     </div>
     <div class="lgpd-actions">
       <button type="button" class="lgpd-more">Saber mais</button>
+      <button type="button" class="lgpd-reject">Recusar</button>
       <button type="button" class="lgpd-accept">Aceitar</button>
     </div>
   </div>
@@ -1521,6 +1476,15 @@
     banner.querySelector('.lgpd-accept').addEventListener('click', function() {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       banner.classList.remove('show');
+      if (typeof gtag === 'function') {
+        gtag('consent', 'update', { 'analytics_storage': 'granted' });
+      }
+    });
+
+    banner.querySelector('.lgpd-reject').addEventListener('click', function() {
+      try { localStorage.setItem(KEY, 'rejected'); } catch (e) {}
+      banner.classList.remove('show');
+      // Analytics stays denied (default). No additional gtag call needed.
     });
 
     banner.querySelector('.lgpd-more').addEventListener('click', function() {

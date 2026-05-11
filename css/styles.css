@@ -2556,6 +2556,13 @@ header .navbar-default .navbar-nav > li.nav-reservar > a::before {
 }
 .lgpd-banner .lgpd-accept:hover { background-color: #1eb238; }
 .lgpd-banner .lgpd-accept:active { transform: scale(0.97); }
+.lgpd-banner .lgpd-reject {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.lgpd-banner .lgpd-reject:hover { background-color: rgba(255, 255, 255, 0.22); }
+.lgpd-banner .lgpd-reject:active { transform: scale(0.97); }
 .lgpd-banner .lgpd-more {
   background-color: transparent;
   color: #fff;
