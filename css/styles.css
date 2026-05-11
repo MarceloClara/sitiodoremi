@@ -919,8 +919,16 @@ header.large .brand {
 }
 #fotos .service-box {
   background-color: #ededed;
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+#fotos .service-box h4 {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2f5d30;
+  line-height: 1.3;
 }
 #fotos .service-box .service-icon {
   height: 43px;
@@ -945,6 +953,31 @@ header.large .brand {
   margin-top: 25px;
   font-size: 18px;
   line-height: 1.7;
+}
+/* Gallery grid: 2-up mobile, 3-up tablet+ (overrides Bootstrap col-md-6 50% default) */
+#fotos .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+#fotos .row > .col-md-12 {
+  width: 100%;
+  flex: 0 0 100%;
+}
+#fotos .row > .col-md-6 {
+  width: 50%;
+  flex: 0 0 50%;
+  float: none;
+  display: flex;
+}
+#fotos .row > .col-md-6 > .service-box {
+  flex: 1;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #fotos .row > .col-md-6 {
+    width: 33.3333%;
+    flex: 0 0 33.3333%;
+  }
 }
 /* Vehicles
 --------------------------------------------*/
