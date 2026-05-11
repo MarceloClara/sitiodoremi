@@ -1,0 +1,16 @@
+/* TEAM */
+  Proprietários: Família Clara
+  Site: https://www.sitiodoremi.com.br/
+  Contato: adm.sitio.doremi@gmail.com
+  Telefone: +55 (11) 94779-1202
+  Local: Taiaçupeba, Mogi das Cruzes - SP, Brasil
+
+/* SITE */
+  Categoria: Travel / Lodging / Vacation Rental
+  Idioma: Português (pt-BR)
+  Hospedagem: GitHub Pages
+  Última atualização: 2026-05-11
+
+/* TECNOLOGIA */
+  HTML5, CSS3, Bootstrap, jQuery
+  Schema.org LodgingBusiness, FAQPage

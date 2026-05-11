@@ -1,0 +1,4 @@
+Contact: mailto:adm.sitio.doremi@gmail.com
+Expires: 2027-05-11T00:00:00Z
+Preferred-Languages: pt-BR, en
+Canonical: https://www.sitiodoremi.com.br/.well-known/security.txt
