@@ -1641,6 +1641,64 @@
     document.querySelectorAll('a[href*="instagram.com"]').forEach(function(a) {
       a.addEventListener('click', function(e) { trackClick(e, 'click_instagram'); });
     });
+
+    // --- Scroll depth (25/50/75/100) ---
+    var scrollThresholds = [25, 50, 75, 100];
+    var scrollFired = new Set();
+    var scrollTicking = false;
+    window.addEventListener('scroll', function() {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(function() {
+        var max = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = max > 0 ? Math.round((window.scrollY / max) * 100) : 0;
+        scrollThresholds.forEach(function(t) {
+          if (pct >= t && !scrollFired.has(t)) {
+            scrollFired.add(t);
+            gtag('event', 'scroll_depth', { percent: t });
+          }
+        });
+        scrollTicking = false;
+      });
+    }, { passive: true });
+
+    // --- Video play (first play only) ---
+    var video = document.querySelector('#information video');
+    if (video) {
+      video.addEventListener('play', function once() {
+        video.removeEventListener('play', once);
+        gtag('event', 'video_play', { video_name: 'sitio_tour' });
+      });
+    }
+
+    // --- FAQ open ---
+    document.querySelectorAll('#faq details').forEach(function(d) {
+      d.addEventListener('toggle', function() {
+        if (!d.open) return;
+        var q = (d.querySelector('summary') || {}).textContent || '';
+        gtag('event', 'faq_open', { question_text: q.trim().slice(0, 80) });
+      });
+    });
+
+    // --- Pricing card view (debounced focus/hover) ---
+    var cardFired = new Set();
+    document.querySelectorAll('.vehicle-data').forEach(function(card) {
+      var hoverTimer = null;
+      function fire() {
+        if (cardFired.has(card.id)) return;
+        cardFired.add(card.id);
+        var navLink = document.querySelector('.vehicle-nav a[href="#' + card.id + '"]');
+        var label = navLink ? navLink.textContent.trim() : card.id;
+        gtag('event', 'pricing_card_view', { card_id: card.id, card_label: label });
+      }
+      card.addEventListener('pointerenter', function() {
+        hoverTimer = setTimeout(fire, 800);
+      });
+      card.addEventListener('pointerleave', function() {
+        clearTimeout(hoverTimer);
+      });
+      card.addEventListener('focusin', fire);
+    });
   })();
   </script>
 
@@ -1682,6 +1740,13 @@
       img.addEventListener('click', function() {
         show(idx);
         if (!dlg.open) dlg.showModal();
+        if (typeof gtag === 'function') {
+          gtag('event', 'lightbox_open', {
+            image_index: idx,
+            image_alt: (img.getAttribute('alt') || '').slice(0, 100),
+            image_src: (img.getAttribute('src') || '').split('/').pop()
+          });
+        }
       });
     });
 
