@@ -68,16 +68,8 @@ body {
   background-color: #23c741;
   border-radius: 0;
 }
-/* Tooltip
+/* Tooltip (title nativo HTML - estilo apenas no span)
 --------------------------------------------*/
-.tooltip .tooltip-inner {
-  background-color: #23c741;
-  padding: 5px 10px;
-  font-size: 18px;
-}
-.tooltip .tooltip-arrow {
-  border-top-color: #23c741 !important;
-}
 .my-tooltip {
   border-bottom: 1px dotted #23c741;
   color: #178026;
@@ -1024,28 +1016,6 @@ header.large .brand {
   position: absolute;
   width: 100%;
 }
-#vehicles .vehicle-nav-control {
-  padding-right: 10px;
-}
-#vehicles .vehicle-nav-control a {
-  width: 50%;
-  height: 40px;
-  display: block;
-  background-color: #716d6e;
-  text-align: center;
-  float: left;
-  color: #fff;
-  line-height: 40px;
-  font-size: 24px;
-  transition: all 0.25s ease-in-out;
-}
-#vehicles .vehicle-nav-control a:first-of-type {
-  border-right: 1px solid #fff;
-}
-#vehicles .vehicle-nav-control a:hover {
-  background-color: rgba(13, 191, 0, 0.4);
-  color: #716d6e;
-}
 #vehicles .vehicle-nav li {
   background-color: #e3e2e2;
   margin-bottom: 1px;
@@ -1823,9 +1793,6 @@ footer .footer-nav li a {
     height: auto;
   }
   #vehicles .vehicle-nav {
-    display: none;
-  }
-  #vehicles .vehicle-nav-control {
     display: none;
   }
   #vehicles .vehicle-img {
