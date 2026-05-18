@@ -177,15 +177,160 @@
       { "@type": "LocationFeatureSpecification", "name": "Estacionamento", "value": true }
     ],
     "makesOffer": [
-      { "@type": "Offer", "name": "Diária para churrasco" },
-      { "@type": "Offer", "name": "Diária com pernoite - casa sede" },
-      { "@type": "Offer", "name": "Final de semana - casa sede" },
-      { "@type": "Offer", "name": "Diária - casa auxiliar" },
-      { "@type": "Offer", "name": "Final de semana - casa auxiliar" },
-      { "@type": "Offer", "name": "Diária - casa sede e auxiliar" },
-      { "@type": "Offer", "name": "Eventos para empresas" },
-      { "@type": "Offer", "name": "Aluguel semanal" }
+      {
+        "@type": "Offer",
+        "name": "Um dia de churrasco",
+        "description": "Diária diurna sem pernoite. Inclui churrasqueira, cozinha caipira, piscina, campo e demais áreas comuns.",
+        "category": "Diária diurna",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-1",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Diária - casa sede",
+        "description": "Diária com pernoite na casa sede. Inclui churrasqueira, cozinha caipira, piscina e campo.",
+        "category": "Diária com pernoite",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-2",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Final de semana - casa sede",
+        "description": "Pacote sábado e domingo na casa sede com pernoite. Inclui todas as áreas comuns.",
+        "category": "Final de semana",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-3",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Diária - casa auxiliar",
+        "description": "Diária com pernoite na casa auxiliar. Inclui churrasqueira, cozinha caipira, piscina e campo.",
+        "category": "Diária com pernoite",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-4",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Final de semana - casa auxiliar",
+        "description": "Pacote sábado e domingo na casa auxiliar com pernoite.",
+        "category": "Final de semana",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-5",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Diária - casa sede e auxiliar",
+        "description": "Aluguel das duas casas com pernoite. Para grupos maiores ou famílias estendidas.",
+        "category": "Diária com pernoite",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-6",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Eventos para empresas",
+        "description": "Confraternizações, treinamentos e eventos corporativos com infraestrutura completa.",
+        "category": "Evento corporativo",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-7",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      },
+      {
+        "@type": "Offer",
+        "name": "Aluguel semanal",
+        "description": "Locação semanal completa. Ideal para temporadas longas, retiros e férias.",
+        "category": "Aluguel semanal",
+        "url": "https://www.sitiodoremi.com.br/#vehicle-8",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "BRL",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "priceCurrency": "BRL",
+          "description": "Sob consulta via WhatsApp"
+        },
+        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
+      }
     ]
+  }
+  </script>
+
+  <!-- Structured data: Service - Eventos corporativos -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Eventos corporativos no Sítio Do-Re-Mi",
+    "description": "Confraternizações de empresa, treinamentos, workshops e encontros corporativos em sítio com infraestrutura completa a 60 km de São Paulo: salão de eventos coberto, churrasqueira, cozinha caipira, piscina, lago, campo de futebol, quadra de areia, estacionamento amplo e área verde para integração.",
+    "serviceType": "Eventos corporativos",
+    "category": "Eventos empresariais",
+    "provider": { "@id": "https://www.sitiodoremi.com.br/#lodging" },
+    "areaServed": [
+      { "@type": "City", "name": "São Paulo" },
+      { "@type": "City", "name": "Mogi das Cruzes" },
+      { "@type": "AdministrativeArea", "name": "Grande São Paulo" }
+    ],
+    "audience": {
+      "@type": "BusinessAudience",
+      "name": "Empresas e equipes corporativas"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.sitiodoremi.com.br/#vehicle-7",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "BRL",
+      "priceSpecification": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "BRL",
+        "description": "Sob consulta via WhatsApp"
+      }
+    }
   }
   </script>
 
