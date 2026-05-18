@@ -1,15 +1,5 @@
 // Custom JS for the Sitio Do-Re-Mi site
 
-// Initialize Tooltip
-//-------------------------------------------------------------
-$('.my-tooltip').tooltip();
-
-
-// Initialize jQuery Placeholder
-//-------------------------------------------------------------
-$('input, textarea').placeholder();
-
-
 // Toggle Header / Nav size on scroll
 //-------------------------------------------------------------
 $(document).on("scroll", function () {
