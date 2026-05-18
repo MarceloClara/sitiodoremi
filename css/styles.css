@@ -23,6 +23,19 @@ body {
 .v-hidden {
   visibility: hidden;
 }
+/* Reveal-on-scroll (substitui WOW.js)
+--------------------------------------------*/
+.wow {
+  visibility: hidden;
+}
+.wow.animated {
+  visibility: visible;
+}
+@media (max-width: 767px) {
+  .wow {
+    visibility: visible;
+  }
+}
 /* Carousel Fade
 --------------------------------------------*/
 .carousel {
