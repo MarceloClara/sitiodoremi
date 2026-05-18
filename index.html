@@ -165,6 +165,36 @@
     "sameAs": [
       "https://www.instagram.com/doremi.sitio/"
     ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "12",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Nathalia Bolanho" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Melhor lugar para sua festa. Lugar incrível e delicioso.",
+        "datePublished": "2023"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Marcio Kazuo" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Aniversário de 15 anos, local muito agradável, limpo, área externa muuuuuuuito grande, piscina aquecida!!!",
+        "datePublished": "2025"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Ricardo Bastos" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Sítio incrível, atendimento muito bom, acomodações confortáveis.",
+        "datePublished": "2025"
+      }
+    ],
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Piscina", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Lago", "value": true },
@@ -1087,10 +1117,9 @@
   <!-- Aluguel end -->
 
   <!-- Comentarios start -->
-  <!-- TODO: Substituir os 3 reviews placeholder abaixo por depoimentos reais (nome, cidade, data). Atual e copy generico, nao testemunho de cliente. -->
-  <section id="reviews" class="container wow fadeInUp">
+  <section id="reviews" class="container wow fadeInUp" aria-label="Avaliações de clientes no Google">
           <div class="row text-center">
-            <div class="col-md-12 stars">
+            <div class="col-md-12 stars" aria-label="Avaliação média 5 de 5 estrelas no Google">
               <span class="glyphicon glyphicon-star"></span>
               <span class="glyphicon glyphicon-star"></span>
               <span class="glyphicon glyphicon-star big"></span>
@@ -1101,50 +1130,51 @@
               <div id="reviews-carousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
 
-                  <!-- Review item 1 start -->
+                  <!-- Review item 1 - Nathalia Bolanho -->
                   <div class="item active">
                     <div class="review">
-                      O lugar tem um amplo espaço para a realização de eventos corporativos, conta com uma infraestrutura completa.
+                      Melhor lugar para sua festa. Lugar incrível e delicioso.
                     </div>
                     <div class="author">
-                      – Venha conhecer o Sítio Do-Re-Mi -
+                      — Nathalia Bolanho · Avaliação 5★ no Google
                     </div>
                   </div>
-                  <!-- Review item 1 end -->
 
-                  <!-- Review item 2 start -->
+                  <!-- Review item 2 - Marcio Kazuo -->
                   <div class="item">
                     <div class="review">
-                      Em  Mogi das Cruzes, distrito de Taiaçupeba, Sítio Do-Re-Mi, comemore seu aniversário, festa da empresa, encontro de amigos, etc.
+                      Aniversário de 15 anos, local muito agradável, limpo, área externa muuuuuuuito grande, piscina aquecida!!!
                     </div>
                     <div class="author">
-                      – Sítio Do-Re-Mi -
+                      — Marcio Kazuo · Avaliação 5★ no Google
                     </div>
                   </div>
-                  <!-- Review item 2 end -->
 
-                  <!-- Review item 3 start -->
+                  <!-- Review item 3 - Ricardo Bastos -->
                   <div class="item">
                     <div class="review">
-                      Passe um dia ou final de semana agradável em Mogi das Cruzes.
+                      Sítio incrível, atendimento muito bom, acomodações confortáveis.
                     </div>
                     <div class="author">
-                      – Mogi das Cruzes, distrito de Taiaçupeba -
+                      — Ricardo Bastos · Avaliação 5★ no Google
                     </div>
                   </div>
-                  <!-- Review item 3 end -->
 
                 </div>
 
-                <!-- Review Nav start -->
                 <ol class="carousel-indicators">
                   <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
                   <li data-target="#reviews-carousel" data-slide-to="1"></li>
                   <li data-target="#reviews-carousel" data-slide-to="2"></li>
                 </ol>
-                <!-- Review Nav end -->
 
               </div>
+              <p class="reviews-source">
+                <a href="https://www.google.com/maps/search/S%C3%ADtio+Do-Re-Mi+Taia%C3%A7upeba+Mogi+das+Cruzes"
+                   target="_blank"
+                   rel="noopener"
+                   data-source="reviews_section">Ver todas as avaliações no Google →</a>
+              </p>
             </div>
           </div>
         </section>

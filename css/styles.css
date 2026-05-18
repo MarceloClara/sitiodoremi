@@ -1176,6 +1176,15 @@ header.large .brand {
   height: 12px;
   background-color: #716d6e;
 }
+#reviews .reviews-source {
+  margin-top: 55px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+#reviews .reviews-source a {
+  color: #178026;
+}
 /* Locations
 --------------------------------------------*/
 #locations {
