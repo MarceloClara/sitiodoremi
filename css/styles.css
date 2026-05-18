@@ -1137,6 +1137,12 @@ header.large .brand {
 #reviews .stars .big {
   font-size: 36px;
 }
+#reviews .rating-caption {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2f5d30;
+  margin-top: 6px;
+}
 #reviews .review {
   font-size: 24px;
   line-height: 1.7;
