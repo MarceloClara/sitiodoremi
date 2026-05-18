@@ -1109,11 +1109,15 @@ header.large .brand {
   display: block;
   height: 50px;
   line-height: 51px;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 900;
   padding: 0 15px;
   box-shadow: 6px 6px 0 #efe9e9;
   text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   transition: .2s;
 }
 #vehicles .reserve-button:hover {
@@ -1636,10 +1640,7 @@ footer .footer-nav li a {
     font-size: 12px;
   }
   #vehicles .reserve-button {
-    font-size: 22px;
-  }
-  #vehicles .reserve-button {
-    font-size: 22px;
+    font-size: 14px;
   }
   #reviews .review {
     font-size: 18px;
