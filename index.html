@@ -1149,6 +1149,45 @@
     </a>
   </div>
 </section>
+<script>
+(function() {
+  var grid = document.querySelector('#instagram .ig-grid');
+  if (!grid) return;
+  var pool = [
+    { src: 'DJI_0395', alt: 'Vista aerea do Sitio Do-Re-Mi', w: 1600, h: 1200 },
+    { src: 'DJI_0397', alt: 'Casa sede vista aerea', w: 1600, h: 1200 },
+    { src: 'DJI_0401', alt: 'Lago em ampla area verde', w: 1600, h: 1200 },
+    { src: 'IMG_6246', alt: 'Piscina com prainha', w: 1600, h: 1066 },
+    { src: 'IMG_6240', alt: 'Vista lateral da piscina', w: 1600, h: 1066 },
+    { src: 'IMG_6317', alt: 'Ampla varanda da casa sede', w: 1600, h: 1066 },
+    { src: 'festa02', alt: 'Area de festas do Sitio Do-Re-Mi', w: 1600, h: 1200 },
+    { src: 'IMG_6243', alt: 'Churrasqueira externa', w: 1600, h: 1066 },
+    { src: 'IMG_6237', alt: 'Cozinha caipira e banheiros externos', w: 1600, h: 1066 },
+    { src: 'IMG_6244', alt: 'Pomar e horta do sitio', w: 1600, h: 1066 },
+    { src: 'IMG_6199', alt: 'Quadra de areia', w: 1600, h: 1066 },
+    { src: 'IMG_6198', alt: 'Portao de entrada do sitio', w: 1600, h: 1066 },
+    { src: 'IMG_6312', alt: 'Cozinha caipira anexa', w: 1600, h: 1066 },
+    { src: 'IMG_6283', alt: 'Sala ampla integrada', w: 1600, h: 1066 },
+    { src: 'IMG_6285', alt: 'Sala integrada com a cozinha', w: 1600, h: 1066 },
+    { src: 'IMG_6203', alt: 'Fachada da casa auxiliar', w: 1600, h: 1066 }
+  ];
+  for (var i = pool.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+  }
+  var ig = 'https://www.instagram.com/doremi.sitio/';
+  var sz = '(min-width: 768px) 33vw, 50vw';
+  grid.innerHTML = pool.slice(0, 6).map(function(p) {
+    return '<a class="ig-card" href="' + ig + '" target="_blank" rel="noopener" data-source="instagram_card" aria-label="Ver foto no Instagram @doremi.sitio">' +
+           '<picture>' +
+             '<source type="image/webp" srcset="imagens/' + p.src + '-400.webp 400w, imagens/' + p.src + '-800.webp 800w, imagens/' + p.src + '.webp 1600w" sizes="' + sz + '">' +
+             '<img src="imagens/' + p.src + '.jpg" srcset="imagens/' + p.src + '-400.jpg 400w, imagens/' + p.src + '-800.jpg 800w, imagens/' + p.src + '.jpg 1600w" sizes="' + sz + '" alt="' + p.alt + '" width="' + p.w + '" height="' + p.h + '" loading="lazy" decoding="async">' +
+           '</picture>' +
+           '<span class="ig-hover" aria-hidden="true"><i class="fa fa-instagram"></i></span>' +
+         '</a>';
+  }).join('');
+})();
+</script>
 <!-- Instagram end -->
 
 <!-- Contato start -->
