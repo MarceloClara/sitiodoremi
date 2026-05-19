@@ -1032,27 +1032,6 @@ header.large .brand {
   border-bottom: 2px solid #2f5d30;
 }
 
-/* Home gallery preview CTA */
-.gallery-more {
-  text-align: center;
-  margin: 20px 0 40px 0;
-}
-.gallery-more a {
-  display: inline-block;
-  padding: 12px 28px;
-  background-color: #2f5d30;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
-}
-.gallery-more a:hover,
-.gallery-more a:focus {
-  background-color: #234622;
-  color: #fff;
-  text-decoration: none;
-}
 /* Vehicles
 --------------------------------------------*/
 #vehicles {
