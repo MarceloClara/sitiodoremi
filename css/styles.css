@@ -922,12 +922,14 @@ header.large .brand {
   background-color: #2f5d30;
   margin: 0 auto;
 }
-#fotos .service-box {
+#fotos .service-box,
+.gallery-section .service-box {
   background-color: #ededed;
   padding: 14px;
   margin-bottom: 20px;
 }
-#fotos .service-box h4 {
+#fotos .service-box h4,
+.gallery-section .service-box h4 {
   margin: 0 0 10px 0;
   padding: 0;
   font-size: 15px;
@@ -960,29 +962,96 @@ header.large .brand {
   line-height: 1.7;
 }
 /* Gallery grid: 2-up mobile, 3-up tablet+ (overrides Bootstrap col-md-6 50% default) */
-#fotos .row {
+#fotos .row,
+.gallery-section .row {
   display: flex;
   flex-wrap: wrap;
 }
-#fotos .row > .col-md-12 {
+#fotos .row > .col-md-12,
+.gallery-section .row > .col-md-12 {
   width: 100%;
   flex: 0 0 100%;
 }
-#fotos .row > .col-md-6 {
+#fotos .row > .col-md-6,
+.gallery-section .row > .col-md-6 {
   width: 50%;
   flex: 0 0 50%;
   float: none;
   display: flex;
 }
-#fotos .row > .col-md-6 > .service-box {
+#fotos .row > .col-md-6 > .service-box,
+.gallery-section .row > .col-md-6 > .service-box {
   flex: 1;
   width: 100%;
 }
 @media (min-width: 768px) {
-  #fotos .row > .col-md-6 {
+  #fotos .row > .col-md-6,
+  .gallery-section .row > .col-md-6 {
     width: 33.3333%;
     flex: 0 0 33.3333%;
   }
+}
+
+/* /fotos.html: page intro + category headings + section spacing */
+.page-intro {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.page-intro .title {
+  margin-bottom: 30px;
+}
+.page-intro h2 {
+  font-size: 46px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+.page-intro .underline {
+  height: 4px;
+  width: 135px;
+  display: block;
+  background-color: #2f5d30;
+  margin: 0 auto 20px auto;
+}
+.page-intro .lead {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.gallery-section {
+  margin-bottom: 30px;
+}
+.gallery-cat {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2f5d30;
+  margin: 30px 0 18px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #2f5d30;
+}
+
+/* Home gallery preview CTA */
+.gallery-more {
+  text-align: center;
+  margin: 20px 0 40px 0;
+}
+.gallery-more a {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #2f5d30;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.gallery-more a:hover,
+.gallery-more a:focus {
+  background-color: #234622;
+  color: #fff;
+  text-decoration: none;
 }
 /* Vehicles
 --------------------------------------------*/
@@ -2455,11 +2524,13 @@ footer .ig-link:hover::before {
 
 /* Gallery lightbox (Wave 2.5)
 --------------------------------------------*/
-#fotos .service-box img {
+#fotos .service-box img,
+.gallery-section .service-box img {
   cursor: zoom-in;
   transition: transform 0.25s ease;
 }
-#fotos .service-box img:hover {
+#fotos .service-box img:hover,
+.gallery-section .service-box img:hover {
   transform: scale(1.02);
 }
 .lightbox[open] {
