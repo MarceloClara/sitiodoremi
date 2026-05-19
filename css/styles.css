@@ -224,6 +224,8 @@ header.large .brand {
   background-color: #23c741;
   background: linear-gradient(to bottom, #2f5d30 0%, #2f5d30 50%, #2f5d30 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@mainColor', endColorstr='@mainColor', GradientType=0);
+  position: relative;
+  overflow: hidden;
 }
 #teaser .reservation-form-shadow {
   height: 480px;
@@ -395,6 +397,8 @@ header.large .brand {
 }
 #teaser .car-img img {
   display: inline-block;
+  max-height: 455px;
+  width: auto;
 }
 #teaser .carousel-control {
   position: relative;
