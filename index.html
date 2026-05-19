@@ -212,7 +212,7 @@
       {
         "@type": "Offer",
         "name": "Um dia de churrasco",
-        "description": "Diária diurna sem pernoite. Inclui churrasqueira, cozinha caipira, piscina e demais áreas comuns.",
+        "description": "Diária diurna sem pernoite. Inclui acesso à casa sede, churrasqueira, cozinha caipira, piscina e demais áreas comuns.",
         "category": "Diária diurna",
         "url": "https://www.sitiodoremi.com.br/#vehicle-1",
         "availability": "https://schema.org/InStock",
@@ -226,70 +226,10 @@
       },
       {
         "@type": "Offer",
-        "name": "Diária - casa sede",
-        "description": "Diária com pernoite na casa sede. Inclui churrasqueira, cozinha caipira e piscina.",
-        "category": "Diária com pernoite",
-        "url": "https://www.sitiodoremi.com.br/#vehicle-2",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "BRL",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "BRL",
-          "description": "Sob consulta via WhatsApp"
-        },
-        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Final de semana - casa sede",
-        "description": "Pacote sábado e domingo na casa sede com pernoite. Inclui todas as áreas comuns.",
+        "name": "Final de semana",
+        "description": "Pacote sábado e domingo com pernoite. Inclui casa sede e casa auxiliar, churrasqueira, cozinha caipira, piscina e demais áreas comuns.",
         "category": "Final de semana",
         "url": "https://www.sitiodoremi.com.br/#vehicle-3",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "BRL",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "BRL",
-          "description": "Sob consulta via WhatsApp"
-        },
-        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Diária - casa auxiliar",
-        "description": "Diária com pernoite na casa auxiliar. Inclui churrasqueira, cozinha caipira e piscina.",
-        "category": "Diária com pernoite",
-        "url": "https://www.sitiodoremi.com.br/#vehicle-4",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "BRL",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "BRL",
-          "description": "Sob consulta via WhatsApp"
-        },
-        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Final de semana - casa auxiliar",
-        "description": "Pacote sábado e domingo na casa auxiliar com pernoite.",
-        "category": "Final de semana",
-        "url": "https://www.sitiodoremi.com.br/#vehicle-5",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "BRL",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "priceCurrency": "BRL",
-          "description": "Sob consulta via WhatsApp"
-        },
-        "seller": { "@id": "https://www.sitiodoremi.com.br/#lodging" }
-      },
-      {
-        "@type": "Offer",
-        "name": "Diária - casa sede e auxiliar",
-        "description": "Aluguel das duas casas com pernoite. Para grupos maiores ou famílias estendidas.",
-        "category": "Diária com pernoite",
-        "url": "https://www.sitiodoremi.com.br/#vehicle-6",
         "availability": "https://schema.org/InStock",
         "priceCurrency": "BRL",
         "priceSpecification": {
@@ -393,7 +333,7 @@
         "name": "Quais opções de aluguel estão disponíveis?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Oferecemos várias opções: diária para churrasco, diária com pernoite na casa sede, final de semana na casa sede, diária e final de semana na casa auxiliar, aluguel das duas casas, eventos para empresas e aluguel semanal."
+          "text": "Oferecemos quatro modalidades: Um dia de churrasco (diurno, sem pernoite), Final de semana (sábado e domingo com pernoite nas duas casas), Eventos para empresas, e Aluguel semanal."
         }
       },
       {
@@ -759,11 +699,7 @@
               <div id="vehicle-nav-container">
                 <ul class="vehicle-nav">
                   <li class="active"><a href="#vehicle-1">Um dia de churrasco</a><span class="active">&nbsp;</span></li>
-                  <li><a href="#vehicle-2">Diária casa sede</a><span class="active">&nbsp;</span></li>
-                  <li><a href="#vehicle-3">Final de semana casa sede</a><span class="active">&nbsp;</span></li>
-                  <li><a href="#vehicle-4">Diária auxiliar</a><span class="active">&nbsp;</span></li>
-                  <li><a href="#vehicle-5">Final de semana casa auxiliar</a><span class="active">&nbsp;</span></li>
-                  <li><a href="#vehicle-6">Diária as duas casas</a><span class="active">&nbsp;</span></li>
+                  <li><a href="#vehicle-3">Final de semana</a><span class="active">&nbsp;</span></li>
                   <li><a href="#vehicle-7">Eventos para empresas</a><span class="active">&nbsp;</span></li>
                   <li><a href="#vehicle-8">Aluguel semanal</a><span class="active">&nbsp;</span></li>
                 </ul>
@@ -784,7 +720,7 @@
                 <table class="table vehicle-features">
                   <tr>
                     <td>Casa sede</td>
-                    <td>Não</td>
+                    <td>Sim</td>
                   </tr>
                   <tr>
                     <td>Casa auxiliar</td>
@@ -816,55 +752,11 @@
             </div>
             <!-- Vehicle 1 data end -->
 
-            <!-- Vehicle 2 data start -->
-            <div class="vehicle-data" id="vehicle-2">
-              <div class="col-md-6" data-wow-offset="200">
-                <div class="vehicle-img">
-                  <picture><source type="image/webp" srcset="imagens/IMG_6311-400.webp 400w, imagens/IMG_6311-800.webp 800w, imagens/IMG_6311.webp 1600w" sizes="(min-width: 992px) 50vw, 100vw"><img class="img-responsive" src="imagens/IMG_6311.jpg" srcset="imagens/IMG_6311-400.jpg 400w, imagens/IMG_6311-800.jpg 800w, imagens/IMG_6311.jpg 1600w" sizes="(min-width: 992px) 50vw, 100vw" alt="Casa sede - opção diária" width="1600" height="1066" loading="lazy" decoding="async"></picture>
-                </div>
-              </div>
-              <div class="col-md-3" data-wow-offset="200">
-                <div class="vehicle-price">R$ consulte <span class="info">Pernoite</span></div>
-                <table class="table vehicle-features">
-                  <tr>
-                    <td>Casa sede</td>
-                    <td>Sim</td>
-                  </tr>
-                  <tr>
-                    <td>Casa auxiliar</td>
-                    <td>Não</td>
-                  </tr>
-                  <tr>
-                    <td>Churrasqueira</td>
-                    <td>Sim</td>
-                  </tr>
-                  <tr>
-                    <td>Cozinha caipira</td>
-                    <td>Sim</td>
-                  </tr>
-                  <tr>
-                    <td>Piscina</td>
-                    <td>Sim</td>
-                  </tr>
-                  <tr>
-                    <td>Pernoite</td>
-                    <td>Sim</td>
-                  </tr>
-                  <tr>
-                    <td>Taxa de Limpeza</td>
-                    <td>R$ consulte</td>
-                  </tr>
-                </table>
-                <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20op%C3%A7%C3%A3o%20%2ADi%C3%A1ria%20casa%20sede%2A%20no%20S%C3%ADtio%20Do-Re-Mi." class="reserve-button" target="_blank" rel="noopener" aria-label="Consultar Diária casa sede no WhatsApp"><i class="fa fa-whatsapp"></i> Falar no WhatsApp</a>
-              </div>
-            </div>
-            <!-- Vehicle 2 data end -->
-
-            <!-- Vehicle 3 data start -->
+            <!-- Vehicle 3 data start (Final de semana - inclui sede + auxiliar) -->
             <div class="vehicle-data" id="vehicle-3">
               <div class="col-md-6" data-wow-offset="200">
                 <div class="vehicle-img">
-                  <picture><source type="image/webp" srcset="imagens/IMG_6311-400.webp 400w, imagens/IMG_6311-800.webp 800w, imagens/IMG_6311.webp 1600w" sizes="(min-width: 992px) 50vw, 100vw"><img class="img-responsive" src="imagens/IMG_6311.jpg" srcset="imagens/IMG_6311-400.jpg 400w, imagens/IMG_6311-800.jpg 800w, imagens/IMG_6311.jpg 1600w" sizes="(min-width: 992px) 50vw, 100vw" alt="Casa sede - opção fim de semana" width="1600" height="1066" loading="lazy" decoding="async"></picture>
+                  <picture><source type="image/webp" srcset="imagens/IMG_6311-400.webp 400w, imagens/IMG_6311-800.webp 800w, imagens/IMG_6311.webp 1600w" sizes="(min-width: 992px) 50vw, 100vw"><img class="img-responsive" src="imagens/IMG_6311.jpg" srcset="imagens/IMG_6311-400.jpg 400w, imagens/IMG_6311-800.jpg 800w, imagens/IMG_6311.jpg 1600w" sizes="(min-width: 992px) 50vw, 100vw" alt="Casa sede e auxiliar - opção final de semana" width="1600" height="1066" loading="lazy" decoding="async"></picture>
                 </div>
               </div>
               <div class="col-md-3" data-wow-offset="200">
@@ -876,7 +768,7 @@
                   </tr>
                   <tr>
                     <td>Casa auxiliar</td>
-                    <td>Não</td>
+                    <td>Sim</td>
                   </tr>
                   <tr>
                     <td>Churrasqueira</td>
@@ -899,142 +791,10 @@
                     <td>R$ consulte</td>
                   </tr>
                 </table>
-                <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20op%C3%A7%C3%A3o%20%2AFinal%20de%20semana%20casa%20sede%2A%20no%20S%C3%ADtio%20Do-Re-Mi." class="reserve-button" target="_blank" rel="noopener" aria-label="Consultar Final de semana casa sede no WhatsApp"><i class="fa fa-whatsapp"></i> Falar no WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20op%C3%A7%C3%A3o%20%2AFinal%20de%20semana%2A%20no%20S%C3%ADtio%20Do-Re-Mi." class="reserve-button" target="_blank" rel="noopener" aria-label="Consultar Final de semana no WhatsApp"><i class="fa fa-whatsapp"></i> Falar no WhatsApp</a>
               </div>
             </div>
             <!-- Vehicle 3 data end -->
-
-            <!-- Vehicle 4 data start -->
-            <div class="vehicle-data" id="vehicle-4">
-              <div class="col-md-6" data-wow-offset="200">
-                <div class="vehicle-img">
-                  <picture><source type="image/webp" srcset="imagens/IMG_6234-400.webp 400w, imagens/IMG_6234-800.webp 800w, imagens/IMG_6234.webp 1600w" sizes="(min-width: 992px) 50vw, 100vw"><img class="img-responsive" src="imagens/IMG_6234.jpg" srcset="imagens/IMG_6234-400.jpg 400w, imagens/IMG_6234-800.jpg 800w, imagens/IMG_6234.jpg 1600w" sizes="(min-width: 992px) 50vw, 100vw" alt="Casa auxiliar - opção diária" width="648" height="432" loading="lazy" decoding="async"></picture>
-                </div>
-              </div>
-              <div class="col-md-3" data-wow-offset="200">
-                <div class="vehicle-price">Consulte<span class="info"></span></div>
-                <table class="table vehicle-features">
-                  <tr>
-                    <td>Casa sede</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Casa auxiliar</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Churrasqueira</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Cozinha caipira</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Piscina</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Pernoite</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Taxa de Limpeza</td>
-                    <td>-</td>
-                  </tr>
-                </table>
-                <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20op%C3%A7%C3%A3o%20%2ADi%C3%A1ria%20casa%20auxiliar%2A%20no%20S%C3%ADtio%20Do-Re-Mi." class="reserve-button" target="_blank" rel="noopener" aria-label="Consultar Diária casa auxiliar no WhatsApp"><i class="fa fa-whatsapp"></i> Falar no WhatsApp</a>
-              </div>
-            </div>
-            <!-- Vehicle 4 data end -->
-
-            <!-- Vehicle 5 data start -->
-            <div class="vehicle-data" id="vehicle-5">
-              <div class="col-md-6" data-wow-offset="200">
-                <div class="vehicle-img">
-                  <picture><source type="image/webp" srcset="imagens/IMG_6278-400.webp 400w, imagens/IMG_6278-800.webp 800w, imagens/IMG_6278.webp 1600w" sizes="(min-width: 992px) 50vw, 100vw"><img class="img-responsive" src="imagens/IMG_6278.jpg" srcset="imagens/IMG_6278-400.jpg 400w, imagens/IMG_6278-800.jpg 800w, imagens/IMG_6278.jpg 1600w" sizes="(min-width: 992px) 50vw, 100vw" alt="Casa auxiliar - opção fim de semana" width="1600" height="1066" loading="lazy" decoding="async"></picture>
-                </div>
-              </div>
-              <div class="col-md-3" data-wow-offset="200">
-                <div class="vehicle-price">Consulte <span class="info"></span></div>
-                <table class="table vehicle-features">
-                  <tr>
-                    <td>Casa sede</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Casa auxiliar</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Churrasqueira</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Cozinha caipira</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Piscina</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Pernoite</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Taxa de Limpeza</td>
-                    <td>-</td>
-                  </tr>
-                </table>
-                <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20op%C3%A7%C3%A3o%20%2AFinal%20de%20semana%20casa%20auxiliar%2A%20no%20S%C3%ADtio%20Do-Re-Mi." class="reserve-button" target="_blank" rel="noopener" aria-label="Consultar Final de semana casa auxiliar no WhatsApp"><i class="fa fa-whatsapp"></i> Falar no WhatsApp</a>
-              </div>
-            </div>
-            <!-- Vehicle 5 data end -->
-
-            <!-- Vehicle 6 data start -->
-            <div class="vehicle-data" id="vehicle-6">
-              <div class="col-md-6" data-wow-offset="200">
-                <div class="vehicle-img">
-                  <picture><source type="image/webp" srcset="imagens/pomar-400.webp 400w, imagens/pomar-800.webp 800w, imagens/pomar.webp 1600w" sizes="(min-width: 992px) 50vw, 100vw"><img class="img-responsive" src="imagens/pomar.jpg" srcset="imagens/pomar-400.jpg 400w, imagens/pomar-800.jpg 800w, imagens/pomar.jpg 1600w" sizes="(min-width: 992px) 50vw, 100vw" alt="Pomar do sítio - opção diária as duas casas" width="1600" height="1200" loading="lazy" decoding="async"></picture>
-                </div>
-              </div>
-              <div class="col-md-3" data-wow-offset="200">
-                <div class="vehicle-price">Consulte <span class="info"></span></div>
-                <table class="table vehicle-features">
-                  <tr>
-                    <td>Casa sede</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Casa auxiliar</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Churrasqueira</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Cozinha caipira</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Piscina</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Pernoite</td>
-                    <td>-</td>
-                  </tr>
-                  <tr>
-                    <td>Taxa de Limpeza</td>
-                    <td>-</td>
-                  </tr>
-                </table>
-                <a href="https://api.whatsapp.com/send?phone=5511947791202&text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20a%20op%C3%A7%C3%A3o%20%2ADi%C3%A1ria%20nas%20duas%20casas%2A%20no%20S%C3%ADtio%20Do-Re-Mi." class="reserve-button" target="_blank" rel="noopener" aria-label="Consultar Diária nas duas casas no WhatsApp"><i class="fa fa-whatsapp"></i> Falar no WhatsApp</a>
-              </div>
-            </div>
-            <!-- Vehicle 6 data end -->
 
             <!-- Vehicle 7 data start -->
             <div class="vehicle-data" id="vehicle-7">
@@ -1553,7 +1313,7 @@
       <details>
         <summary>Quais opções de aluguel estão disponíveis?</summary>
         <div class="faq-answer">
-          Oferecemos várias opções: diária para churrasco, diária com pernoite na casa sede, final de semana na casa sede, diária e final de semana na casa auxiliar, aluguel das duas casas, eventos para empresas e aluguel semanal.
+          Oferecemos quatro modalidades: Um dia de churrasco (diurno, sem pernoite), Final de semana (sábado e domingo com pernoite nas duas casas), Eventos para empresas, e Aluguel semanal.
         </div>
       </details>
       <details>
