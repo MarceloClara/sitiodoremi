@@ -2186,6 +2186,74 @@ footer .ig-link:hover::before {
   .trust-strip .trust-item { font-size: 15px; width: 100%; justify-content: flex-start; }
 }
 
+/* LP Cards (descoberta por intencao - substitui trust strip)
+--------------------------------------------*/
+.lp-cards {
+  background-color: #f5f8f5;
+  padding: 40px 15px;
+  border-bottom: 1px solid #e8ede8;
+}
+.lp-cards .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 991px) {
+  .lp-cards .container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .lp-cards .container { grid-template-columns: 1fr; }
+}
+.lp-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+}
+.lp-card:hover,
+.lp-card:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  text-decoration: none;
+  color: #333;
+}
+.lp-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.lp-card-body {
+  padding: 18px 20px;
+}
+.lp-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #2f5d30;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.lp-card p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+.lp-card-cta {
+  display: inline-block;
+  color: #178026;
+  font-weight: bold;
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  .lp-cards { padding: 28px 15px; }
+  .lp-card img { height: 160px; }
+}
+
 /* "Como chegar" card (Wave 2.2)
 --------------------------------------------*/
 .directions-card {
