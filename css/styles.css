@@ -2193,16 +2193,19 @@ footer .ig-link:hover::before {
   padding: 40px 15px;
   border-bottom: 1px solid #e8ede8;
 }
-.lp-cards .container {
+.lp-cards-grid {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 @media (max-width: 991px) {
-  .lp-cards .container { grid-template-columns: repeat(2, 1fr); }
+  .lp-cards-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
-  .lp-cards .container { grid-template-columns: 1fr; }
+  .lp-cards-grid { grid-template-columns: 1fr; }
 }
 .lp-card {
   background: #fff;
@@ -2248,6 +2251,10 @@ footer .ig-link:hover::before {
   color: #178026;
   font-weight: bold;
   font-size: 14px;
+}
+/* PNG transparente: fundo verde claro nas areas transparentes */
+.img-bg-tint {
+  background-color: #dde8d8;
 }
 @media (max-width: 767px) {
   .lp-cards { padding: 28px 15px; }
